@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "jest",
-    "postinstall": "cp node_modules/@patternfly/patternfly/patternfly.min.css css/ && cp node_modules/@patternfly/patternfly/patternfly-additions.min.css css/ && cp node_modules/jquery/dist/jquery.min.js js/"
+    "copy-assets": "cp node_modules/@patternfly/patternfly/patternfly.min.css css/ && cp node_modules/jquery/dist/jquery.min.js js/ && cp -r node_modules/@patternfly/patternfly/assets/fonts/ ./css/assets/",
+    "postinstall": "npm run copy-assets"
   },
   "dependencies": {
     "@patternfly/patternfly": "^5.2.1",

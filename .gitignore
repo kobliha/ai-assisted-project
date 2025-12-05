@@ -3,5 +3,5 @@
 
 # Copied assets from node_modules
 /css/patternfly.min.css
-/css/patternfly-additions.min.css
 /js/jquery.min.js
+/css/assets/
