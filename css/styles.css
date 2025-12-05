@@ -3,6 +3,48 @@ body {
     padding: 2rem;
 }
 
-#my-card {
+.pf-v5-c-page__header-brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo-svg {
+    height: 2rem;
+    width: 2rem;
+}
+ 
+.table-container {
+    height: 300px; /* Or any height you prefer */
+    overflow-y: auto;
+    border: 1px solid var(--pf-v5-global--BorderColor--100);
     margin-top: 2rem;
+}
+
+#items-toolbar {
+    margin-top: 1rem;
+}
+ 
+/* Align toolbar content to the right */
+#items-toolbar .pf-v5-c-toolbar__content-section {
+    justify-content: flex-end;
+}
+
+/* Style for the table header */
+.pf-v5-c-table#items-table thead .pf-v5-c-table__th {
+    background-color: var(--pf-v5-global--palette--black-800) !important;
+    color: var(--pf-v5-global--Color--light-100) !important;
+    font-weight: var(--pf-v5-global--FontWeight--bold) !important;
+}
+
+/* Style for selected table rows */
+.pf-v5-c-table.pf-m-selectable tbody tr.pf-m-selected > td,
+.pf-v5-c-table.pf-m-selectable tbody tr.pf-m-selected:hover > td {
+  background-color: var(--pf-v5-global--palette--blue-50) !important;
+}
+ 
+/* Keep the default hover effect for unselected rows */
+.pf-v5-c-table.pf-m-selectable tbody tr:not(.pf-m-selected):hover > td {
+  background-color: var(--pf-v5-global--BackgroundColor--200) !important;
 }

@@ -10,27 +10,96 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="pf-v5-c-page">
+    <header class="pf-v5-c-page__header">
+        <div class="pf-v5-c-page__header-brand">
+            <a href="#" class="pf-v5-c-page__header-brand-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="logo-svg" fill="currentColor">
+                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path d="M128 32C128 14.3 142.3 0 160 0s32 14.3 32 32V48c0 17.7-14.3 32-32 32s-32-14.3-32-32V32zM64 128c-17.7 0-32 14.3-32 32s14.3 32 32 32V128zM288 32c0-17.7 14.3-32 32-32s32 14.3 32 32V48c0 17.7-14.3 32-32 32s-32-14.3-32-32V32zM384 128v64c17.7 0 32-14.3 32-32s-14.3-32-32-32zM256 224c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 17.7 14.3 32 32 32s32-14.3 32-32V224zM128 80c0-26.5-21.5-48-48-48S32 53.5 32 80v80c0 8.8-7.2 16-16 16s-16-7.2-16-16V80C0 35.8 35.8 0 80 0s80 35.8 80 80v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V80zM368 96c-8.8 0-16-7.2-16-16V80c0-44.2-35.8-80-80-80s-80 35.8-80 80v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V80C160 35.8 195.8 0 240 0s80 35.8 80 80v16c0 8.8-7.2 16-16 16zM432 160c8.8 0 16-7.2 16-16V80c0-44.2-35.8-80-80-80s-80 35.8-80 80v16c0 8.8 7.2 16 16 16s16-7.2 16-16V80c0-26.5 21.5-48 48-48s48 21.5 48 48v64c0 8.8 7.2 16 16 16zM224 352c-44.2 0-80 35.8-80 80v32c0 26.5 21.5 48 48 48h48c26.5 0 48-21.5 48-48V432c0-44.2-35.8-80-80-80H224zM80 256c-44.2 0-80 35.8-80 80v48c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V336c0-44.2-35.8-80-80-80zM448 384c0-44.2-35.8-80-80-80s-80 35.8-80 80v48c0 26.5 21.5 48 48 48h48c26.5 0 48-21.5 48-48V384z"/>
+                </svg>
+                <p class="pf-v5-c-title pf-m-xl">OctoKus</p>
+            </a>
+        </div>
+        <!-- Future Menu will go here -->
+    </header>
 
-    <div class="pf-v5-c-page__main-section">
+    <div class="pf-v5-c-page__main-section pf-m-light">
         <div class="pf-v5-c-content">
-            <h1>Welcome to Your Dynamic Web Project!</h1>
-            <p>This project is set up with PatternFly and jQuery.</p>
+            <h1 class="pf-v5-c-title pf-m-2xl">Table of Items</h1>
 
-            <!-- Example PatternFly Component: Button -->
-            <button id="my-button" class="pf-v5-c-button pf-m-primary" type="button">Click Me</button>
+            <div class="table-container">
+                <table class="pf-v5-c-table pf-m-compact pf-m-selectable" role="grid" aria-label="Items Table" id="items-table">
+                    <thead>
+                        <tr class="pf-v5-c-table__tr">
+                            <th class="pf-v5-c-table__th" style="width: 15%;">ID</th>
+                            <th class="pf-v5-c-table__th" style="width: 50%;">Name</th>
+                            <th class="pf-v5-c-table__th" style="width: 30%;">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sample Row 1 -->
+                        <tr class="pf-v5-c-table__tr" role="button" data-id="1">
+                            <td class="pf-v5-c-table__td" data-label="ID">1</td>
+                            <td class="pf-v5-c-table__td" data-label="Name">PatternFly Hat</td>
+                            <td class="pf-v5-c-table__td" data-label="Price">$25.00</td>
+                        </tr>
+                        <!-- Sample Row 2 -->
+                        <tr class="pf-v5-c-table__tr" role="button" data-id="2">
+                            <td class="pf-v5-c-table__td" data-label="ID">2</td>
+                            <td class="pf-v5-c-table__td" data-label="Name">jQuery T-Shirt</td>
+                            <td class="pf-v5-c-table__td" data-label="Price">$30.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <!-- New PatternFly Card Component -->
-            <div class="pf-v5-c-card" id="my-card">
-                <div class="pf-v5-c-card__title">
-                    <h2 class="pf-v5-c-title pf-m-lg">My First Card</h2>
-                </div>
-                <div class="pf-v5-c-card__body">
-                    This is the body of the card. You can place any content here, from simple text to more complex components.
-                </div>
-                <div class="pf-v5-c-card__footer">
-                    <button class="pf-v5-c-button pf-m-link pf-m-inline">Card Action</button>
+            <div class="pf-v5-c-toolbar" id="items-toolbar">
+                <div class="pf-v5-c-toolbar__content">
+                    <div class="pf-v5-c-toolbar__content-section">
+                        <div class="pf-v5-c-toolbar__item">
+                            <button class="pf-v5-c-button pf-m-primary" id="btn-add">Add New</button>
+                        </div>
+                        <div class="pf-v5-c-toolbar__item">
+                            <button class="pf-v5-c-button pf-m-secondary" id="btn-edit" disabled>Edit</button>
+                        </div>
+                        <div class="pf-v5-c-toolbar__item">
+                            <button class="pf-v5-c-button pf-m-danger" id="btn-delete" disabled>Delete</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal for Adding/Editing Items -->
+    <div class="pf-v5-c-backdrop" id="item-modal-backdrop" style="display: none;">
+        <div class="pf-v5-c-modal-box" role="dialog" aria-modal="true" aria-labelledby="item-modal-title">
+            <button class="pf-v5-c-button pf-m-plain" type="button" aria-label="Close" id="item-modal-close">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <header class="pf-v5-c-modal-box__header">
+                <h1 class="pf-v5-c-modal-box__title" id="item-modal-title">Edit Item</h1>
+            </header>
+            <div class="pf-v5-c-modal-box__body">
+                <form class="pf-v5-c-form">
+                    <div class="pf-v5-c-form__group">
+                        <label class="pf-v5-c-form__label" for="item-id"><span class="pf-v5-c-form__label-text">ID</span></label>
+                        <input class="pf-v5-c-form-control" type="text" id="item-id" name="item-id" readonly />
+                    </div>
+                    <div class="pf-v5-c-form__group">
+                        <label class="pf-v5-c-form__label" for="item-name"><span class="pf-v5-c-form__label-text">Name</span></label>
+                        <input class="pf-v5-c-form-control" type="text" id="item-name" name="item-name" required />
+                    </div>
+                    <div class="pf-v5-c-form__group">
+                        <label class="pf-v5-c-form__label" for="item-price"><span class="pf-v5-c-form__label-text">Price</span></label>
+                        <input class="pf-v5-c-form-control" type="text" id="item-price" name="item-price" required />
+                    </div>
+                </form>
+            </div>
+            <footer class="pf-v5-c-modal-box__footer">
+                <button class="pf-v5-c-button pf-m-primary" type="button" id="item-modal-save">Save</button>
+                <button class="pf-v5-c-button pf-m-link" type="button" id="item-modal-cancel">Cancel</button>
+            </footer>
         </div>
     </div>
 
