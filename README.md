@@ -1,6 +1,6 @@
-# Dynamic Web Project with PatternFly and jQuery
+# OctoKus Item Management App
 
-This project is a boilerplate for building dynamic, modern web applications using the PatternFly design system and the jQuery library. It includes a pre-configured directory structure, essential dependencies, and a testing environment with Jest.
+This project is a dynamic web application for managing a list of items. It is built using the PatternFly design system for a modern, enterprise-grade look and feel, with jQuery handling the DOM manipulation and user interactions.
 
 ## Table of Contents
 
@@ -29,17 +29,10 @@ You will need [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) (
     \`\`\`
 
 2.  **Install dependencies:**
-    This command will download all the necessary dependencies listed in \`package.json\` into the \`node_modules\` directory.
+    This command will download all necessary dependencies and automatically run the `postinstall` script to copy PatternFly and jQuery assets to the correct directories.
     \`\`\`bash
     npm install
     \`\`\`
-
-3.  **Set up static assets:**
-    After installation, you need to copy the required PatternFly and jQuery files from \`node_modules\` to their respective directories.
-
-    - Copy \`node_modules/@patternfly/patternfly/patternfly.min.css\` to \`/css/\`
-    - Copy \`node_modules/@patternfly/patternfly/patternfly-additions.min.css\` to \`/css/\`
-    - Copy \`node_modules/jquery/dist/jquery.min.js\` to \`/js/\`
 
 4.  **Open \`index.html\` in your browser:**
     You can now open the \`index.html\` file directly in your web browser to see the application running.
@@ -51,7 +44,7 @@ The project follows a structured layout to keep code organized and maintainable.
 \`\`\`
 /my-dynamic-project
 |-- /css
-|   |-- patternfly.min.css
+|   |-- patternfly.min.css 
 |   \`-- styles.css
 |-- /js
 |   |-- jquery.min.js
@@ -92,7 +85,7 @@ This command will look for test files in the \`__tests__\` directory and run the
     -   \`app.js\`: The main application logic, including event handling for the table (add, edit, delete) and modal interactions.
 
 -   **\`/__tests__\`**: Contains all unit tests.
-    -   \`app.test.js\`: A sample test file for \`app.js\`.
+    -   \`app.test.js\`: Unit tests for the application's core logic.
 
 -   **\`index.html\`**: The main entry point of the application.
 

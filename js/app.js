@@ -1,22 +1,23 @@
+/**
+ * Updates the enabled/disabled state of the Edit and Delete buttons
+ * based on the number of selected rows in the table.
+ */
+function updateButtonStates() {
+    const $itemsTable = $("#items-table tbody");
+    const $editButton = $("#btn-edit");
+    const $deleteButton = $("#btn-delete");
+    const selectedCount = $itemsTable.find("tr.pf-m-selected").length;
+    $editButton.prop("disabled", selectedCount !== 1);
+    $deleteButton.prop("disabled", selectedCount === 0);
+}
+
 // Ensure the DOM is fully loaded before running scripts
-$(document).ready(function() {
-    console.log("Application started and jQuery is working!");
-    
+const ready = new Promise(function(resolve) {$(document).ready(function() {
     const $editButton = $("#btn-edit");
     const $deleteButton = $("#btn-delete");
     const $itemModal = $("#item-modal-backdrop");
     const $itemsTable = $("#items-table tbody");
     let nextId = 3; // Start IDs for new items after the initial sample data
-
-    /**
-     * Updates the enabled/disabled state of the Edit and Delete buttons
-     * based on the number of selected rows in the table.
-     */
-    function updateButtonStates() {
-        const selectedCount = $itemsTable.find("tr.pf-m-selected").length;
-        $editButton.prop("disabled", selectedCount !== 1);
-        $deleteButton.prop("disabled", selectedCount === 0);
-    }
 
     /**
      * Opens the modal dialog.
@@ -102,6 +103,8 @@ $(document).ready(function() {
 
     // Modal "Cancel" and "Close" button clicks
     $("#item-modal-cancel, #item-modal-close").on("click", closeModal);
+    resolve();
+});
 });
 
 // A simple function to demonstrate unit testing
@@ -110,6 +113,10 @@ function add(a, b) {
 }
 
 // Export the function if you are using a module system for testing
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = add;
+if (typeof module !== "undefined" && module.exports) {
+    module.exports = {
+        add,
+        updateButtonStates,
+        ready,
+    };
 }
