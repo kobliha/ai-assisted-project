@@ -52,7 +52,6 @@ The project follows a structured layout to keep code organized and maintainable.
 /my-dynamic-project
 |-- /css
 |   |-- patternfly.min.css
-|   |-- patternfly-additions.min.css
 |   \`-- styles.css
 |-- /js
 |   |-- jquery.min.js
@@ -86,11 +85,11 @@ This command will look for test files in the \`__tests__\` directory and run the
 
 -   **\`/css\`**: Contains all stylesheets.
     -   \`patternfly.min.css\` & \`patternfly-additions.min.css\`: The core PatternFly library styles.
-    -   \`styles.css\`: For your custom application-specific styles.
+    -   \`styles.css\`: Custom styles for the application, including table and logo styling.
 
 -   **\`/js\`**: Contains all JavaScript files.
     -   \`jquery.min.js\`: The jQuery library.
-    -   \`app.js\`: Your main application logic and jQuery scripts.
+    -   \`app.js\`: The main application logic, including event handling for the table (add, edit, delete) and modal interactions.
 
 -   **\`/__tests__\`**: Contains all unit tests.
     -   \`app.test.js\`: A sample test file for \`app.js\`.
