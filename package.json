@@ -1,0 +1,20 @@
+{
+  "name": "ai-assisted-project",
+  "version": "1.0.0",
+  "description": "A dynamic web project using PatternFly and jQuery.",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "postinstall": "cp node_modules/@patternfly/patternfly/patternfly.min.css css/ && cp node_modules/@patternfly/patternfly/patternfly-additions.min.css css/ && cp node_modules/jquery/dist/jquery.min.js js/"
+  },
+  "dependencies": {
+    "@patternfly/patternfly": "^5.2.1",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
